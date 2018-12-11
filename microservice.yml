@@ -1,0 +1,33 @@
+omg: 1
+lifecycle:
+  startup:
+    command: ["python", "/app/app.py"]
+actions:
+  write:
+    http:
+      port: 8080
+      method: post
+      path: /getTime
+    arguments:
+      text:
+        type: string
+        in: requestBody
+    output:
+      type: string
+  read:
+    http:
+      port: 8080
+      method: get
+      path: /getLocation
+    arguments:
+      text:
+        type: string
+        in: requestBody
+    output:
+      type: string
+environment:
+  CORENLP_URI:
+    help: |
+      The Core NLP to be used in the connection.
+      Defaults to http://localhost:9000/.
+    type: string
