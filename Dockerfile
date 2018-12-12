@@ -21,7 +21,8 @@ EXPOSE $PORT1
 CMD java -cp "*" -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer
 
 FROM        python:3.7-alpine
-
+RUN         sudo apt install python3.7-dev
+run         python3.7 -m pip install psutil
 RUN         mkdir /app
 ADD         requirements.txt /app
 RUN         pip install -r /app/requirements.txt
