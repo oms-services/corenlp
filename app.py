@@ -22,7 +22,7 @@ class StanfordNLP:
         return self.nlp.pos_tag(sentence)
 
     def ner(self, sentence):
-        return self.nlp.ner(sentence)
+        return json.dumps(self.nlp.ner(sentence))
 
     def parse(self, sentence):
         return self.nlp.parse(sentence)
