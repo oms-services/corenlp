@@ -1,7 +1,11 @@
 omg: 1
+info:
+  version: 0.1.0
+  title: CoreNLP
+  description: Allows interaction with CoreNLP
 lifecycle:
   startup:
-    command: ["python", "/app/app.py"]
+    command: ['python', '/app/app.py']
 actions:
   write:
     http:
