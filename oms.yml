@@ -1,11 +1,17 @@
-omg: 1
+oms: 1
 info:
   version: 0.1.0
   title: CoreNLP
   description: Allows interaction with CoreNLP
+  contact:
+    name: Open Microservices
+    url: 'https://openmicroservices.org'
+    email: core@openmicroservices.org
 lifecycle:
   startup:
-    command: ['python', '/app/app.py']
+    command:
+      - python
+      - /app/app.py
 actions:
   write:
     http:
