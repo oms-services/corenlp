@@ -22,7 +22,7 @@ CMD java -cp "*" -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer
 
 FROM python:3.8-alpine
 RUN         apk --no-cache add --update make musl-dev linux-headers py-pip build-base gcc coreutils libc-dev libffi-dev python-dev
-run         python3.7 -m pip install psutil
+RUN         python3.8 -m pip install psutil
 RUN         mkdir /app
 ADD         requirements.txt /app
 RUN         pip install -r /app/requirements.txt
